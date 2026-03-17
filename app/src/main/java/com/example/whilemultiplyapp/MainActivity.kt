@@ -29,9 +29,13 @@ class MainActivity : AppCompatActivity() {
             var num2 = edtNumSecondNum.text.toString().toInt()
             var answer: Int = 0
 
+            var counter: Int = 0
 
-
-            tvAnswer.text = answer.toString()
+            while (counter < num1){
+                answer += num2//answer = answer + num2
+                counter++//counter = counter + 1
+                tvAnswer.append("\n$counter x $num2 = $answer")
+            }
         }
     }
 }
